@@ -29,29 +29,19 @@ namespace Projeto_Hotel
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tb_usuario = new System.Windows.Forms.TextBox();
+            this.btn_entrar = new System.Windows.Forms.Button();
             this.tb_senha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_entrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tb_usuario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Projeto_Hotel.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(142, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 172);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -90,30 +80,26 @@ namespace Projeto_Hotel
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // label2
+            // btn_entrar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Usuário:";
-            // 
-            // tb_usuario
-            // 
-            this.tb_usuario.Location = new System.Drawing.Point(96, 19);
-            this.tb_usuario.Name = "tb_usuario";
-            this.tb_usuario.Size = new System.Drawing.Size(289, 22);
-            this.tb_usuario.TabIndex = 1;
+            this.btn_entrar.AccessibleDescription = "";
+            this.btn_entrar.AccessibleName = "";
+            this.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_entrar.Location = new System.Drawing.Point(160, 116);
+            this.btn_entrar.Name = "btn_entrar";
+            this.btn_entrar.Size = new System.Drawing.Size(113, 23);
+            this.btn_entrar.TabIndex = 2;
+            this.btn_entrar.Text = "Entrar";
+            this.btn_entrar.UseVisualStyleBackColor = true;
+            this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
             // 
             // tb_senha
             // 
             this.tb_senha.Location = new System.Drawing.Point(97, 60);
             this.tb_senha.Name = "tb_senha";
             this.tb_senha.Size = new System.Drawing.Size(288, 22);
-            this.tb_senha.TabIndex = 3;
+            this.tb_senha.TabIndex = 1;
             this.tb_senha.UseSystemPasswordChar = true;
             // 
             // label3
@@ -127,18 +113,33 @@ namespace Projeto_Hotel
             this.label3.TabIndex = 2;
             this.label3.Text = "Senha:";
             // 
-            // btn_entrar
+            // tb_usuario
             // 
-            this.btn_entrar.AccessibleDescription = "";
-            this.btn_entrar.AccessibleName = "";
-            this.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrar.Location = new System.Drawing.Point(160, 116);
-            this.btn_entrar.Name = "btn_entrar";
-            this.btn_entrar.Size = new System.Drawing.Size(113, 23);
-            this.btn_entrar.TabIndex = 3;
-            this.btn_entrar.Text = "Entrar";
-            this.btn_entrar.UseVisualStyleBackColor = true;
+            this.tb_usuario.Location = new System.Drawing.Point(96, 19);
+            this.tb_usuario.Name = "tb_usuario";
+            this.tb_usuario.Size = new System.Drawing.Size(289, 22);
+            this.tb_usuario.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(18, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Usuário:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Projeto_Hotel.Properties.Resources.login;
+            this.pictureBox1.Location = new System.Drawing.Point(142, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(172, 172);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -152,10 +153,10 @@ namespace Projeto_Hotel
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

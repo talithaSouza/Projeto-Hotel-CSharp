@@ -16,5 +16,17 @@ namespace Projeto_Hotel
         {
             InitializeComponent();
         }
+
+        private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void gerenciarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGerenciar_Clientes formGerenciar_Clientes = new FormGerenciar_Clientes();
+
+            formGerenciar_Clientes.ShowDialog();
+        }
     }
 }
